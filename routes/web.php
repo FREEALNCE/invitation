@@ -18,10 +18,10 @@ use App\Http\Controllers\Cms\UsersController;
 use App\Http\Controllers\Cms\CmsMenusDetailController;
 use App\Http\Controllers\Cms\CmsEmailsController;
 use App\Http\Controllers\Cms\CmsDocumentController;
-
+//WEB
+use App\Http\Controllers\Web\WebController;
 // MANAGEMENT CLASS
-use App\Http\Controllers\Microservice\LinkedinController;
-use App\Http\Controllers\Microservice\InstagramController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,35 +38,7 @@ Route::middleware(['web'])->group(function () {
     Route::group(['middleware' => ['auth']], function () {
         //URL AUTO GENERATE
 
-        Route::get("linkedin/{menu_detail}",[LinkedinController::class,"index"]);
-
-        Route::get("linkedin/create/{menu_detail}",[LinkedinController::class,"create"]);
-
-        Route::get("linkedin/edit/{menu_detail}/{id}",[LinkedinController::class,"edit"]);
-
-        Route::get("linkedin/show/{menu_detail}/{id}",[LinkedinController::class,"show"]);
-
-        Route::post("linkedin/store",[LinkedinController::class,"store"]);
-
-        Route::post("linkedin/update",[LinkedinController::class,"update"]);
-
-        Route::get("linkedin/destroy/{menu_detail}/{id}",[LinkedinController::class,"destroy"]);
-
-
-        Route::get("instagram/{menu_detail}",[InstagramController::class,"index"]);
-
-        Route::get("instagram/create/{menu_detail}",[InstagramController::class,"create"]);
-
-        Route::get("instagram/edit/{menu_detail}/{id}",[InstagramController::class,"edit"]);
-
-        Route::get("instagram/show/{menu_detail}/{id}",[InstagramController::class,"show"]);
-
-        Route::post("instagram/store",[InstagramController::class,"store"]);
-
-        Route::post("instagram/update",[InstagramController::class,"update"]);
-
-        Route::get("instagram/destroy/{menu_detail}/{id}",[InstagramController::class,"destroy"]);
-
+        
     });
 
 });
@@ -184,7 +156,8 @@ Route::middleware(['web'])->group(function () {
 
     });
 
-    Route::get('/',[GuestController::class, 'welcome'])->name('welcome');
+    Route::get('/',[WebController::class, 'index'])->name('index');
+    Route::get('about',[WebController::class, 'about'])->name('about');
 
 
 });

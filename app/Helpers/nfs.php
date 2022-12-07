@@ -27,7 +27,7 @@ class Nfs {
    
     //default nama app
     public static function app(){
-        return "NonScrap";
+        return "Invitation.id";
     }
 
     //default route admin

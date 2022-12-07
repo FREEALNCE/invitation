@@ -19,7 +19,8 @@ class CmsRoleSeeder extends Seeder
         DB::table('cms_role')->insert([
             ['id'   =>1, 'name' => 'superadmin'],
             ['id'   =>2, 'name' => 'admin'],
-            ['id'   =>3, 'name' => 'user'],
+            ['id'   =>3, 'name' => 'desaigner'],
+            ['id'   =>4, 'name' => 'user'],
         ]);
     }
 }
