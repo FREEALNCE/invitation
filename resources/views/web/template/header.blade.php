@@ -139,9 +139,17 @@
                         Help & FAQs
                     </a>
 
-                    <a href="#" class="flex-c-m p-lr-10 trans-04">
+                    @auth
+                    <a href="{{url('login')}}" class="flex-c-m p-lr-10 trans-04">
                         My Account
                     </a>
+                    @endauth
+
+                    @guest
+                    <a href="{{url('login')}}" class="flex-c-m p-lr-10 trans-04">
+                        Login
+                    </a>
+                    @endguest
 
                     <a href="#" class="flex-c-m p-lr-10 trans-04">
                         EN
@@ -155,36 +163,21 @@
         </ul>
 
         <ul class="main-menu-m">
+
             <li>
-                <a href="index.html">Home</a>
-                <ul class="sub-menu-m">
-                    <li><a href="index.html">Homepage 1</a></li>
-                    <li><a href="home-02.html">Homepage 2</a></li>
-                    <li><a href="home-03.html">Homepage 3</a></li>
-                </ul>
-                <span class="arrow-main-menu-m">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </span>
+                <a href="{{url('/')}}">Home</a>
             </li>
 
             <li>
-                <a href="product.html">Shop</a>
+                <a href="{{url('shope')}}">Shop</a>
             </li>
 
             <li>
-                <a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+                <a href="{{url('about')}}">About</a>
             </li>
 
             <li>
-                <a href="blog.html">Blog</a>
-            </li>
-
-            <li>
-                <a href="about.html">About</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
+                <a href="{{url('contact')}}l">Contact</a>
             </li>
         </ul>
     </div>
