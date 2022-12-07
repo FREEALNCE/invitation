@@ -1,5 +1,5 @@
 <!-- Header -->
-<header>
+<header id="header-nav">
     <!-- Header desktop -->
     <div class="container-menu-desktop">
         <!-- Topbar -->
@@ -14,9 +14,17 @@
                         Help & FAQs
                     </a>
 
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
+                    @auth
+                    <a href="{{url('login')}}" class="flex-c-m trans-04 p-lr-25">
                         My Account
                     </a>
+                    @endauth
+
+                    @guest
+                    <a href="{{url('login')}}" class="flex-c-m trans-04 p-lr-25">
+                        Login
+                    </a>
+                    @endguest
 
                     <a href="#" class="flex-c-m trans-04 p-lr-25">
                         EN
@@ -45,7 +53,7 @@
                         </li>
 
                         <li>
-                            <a href="product.html">Shop</a>
+                            <a href="{{url('shope')}}">Shop</a>
                         </li>
 
                         <li>
@@ -53,7 +61,7 @@
                         </li>
 
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="{{url('contact')}}">Contact</a>
                         </li>
                     </ul>
                 </div>	
@@ -64,8 +72,13 @@
                         <i class="zmdi zmdi-search"></i>
                     </div>
 
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
-                        <i class="zmdi zmdi-shopping-cart"></i>
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="2">
+                        <a href="{{url('chart')}}">
+                            <i class="zmdi zmdi-shopping-cart">
+
+                            </i>
+                        </a>
+                        
                     </div>
 
                     <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
@@ -80,7 +93,7 @@
     <div class="wrap-header-mobile">
         <!-- Logo moblie -->		
         <div class="logo-mobile">
-            <a href="index.html"><img src="{{url('web/images/icons/logo-01.png')}}" alt="IMG-LOGO"></a>
+            <a href="{{url('/')}}"><img src="{{url('web/images/icons/logo-01.png')}}" alt="IMG-LOGO"></a>
         </div>
 
         <!-- Icon header -->
@@ -89,8 +102,12 @@
                 <i class="zmdi zmdi-search"></i>
             </div>
 
-            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
-                <i class="zmdi zmdi-shopping-cart"></i>
+            <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="2">
+                <a href="{{url('chart')}}">
+                    <i class="zmdi zmdi-shopping-cart">
+
+                    </i>
+                </a>
             </div>
 
             <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">

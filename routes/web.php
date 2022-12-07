@@ -158,6 +158,9 @@ Route::middleware(['web'])->group(function () {
 
     Route::get('/',[WebController::class, 'index'])->name('index');
     Route::get('about',[WebController::class, 'about'])->name('about');
+    Route::get('shope',[WebController::class, 'shope'])->name('shope');
+    Route::get('contact',[WebController::class, 'contact'])->name('contact');
+    Route::get('chart',[WebController::class, 'chart'])->name('chart');
 
 
 });

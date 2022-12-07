@@ -27,6 +27,21 @@ class WebController extends Controller
         return view('web.about');
     }
 
+    public function shope()
+    {
+        return view('web.shope');
+    }
+
+    public function contact()
+    {
+        return view('web.contact');
+    }
+
+    public function chart()
+    {
+        return view('web.chart');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
