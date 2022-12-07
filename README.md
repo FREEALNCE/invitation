@@ -38,7 +38,7 @@ INI ADALAH BASE FRAMEWORK LARAVEL SUDAH DI CONFIG AUTH, MIDELWARE DAN SUDAH ADA 
                     </div>
 
                   </div>
-                </div>
+        
 
 list pakage
 composer require laravel/passport
