@@ -27,7 +27,7 @@ class Nfs {
    
     //default nama app
     public static function app(){
-        return "Invitation.id";
+        return "Invitewedding.id";
     }
 
     //default route admin
