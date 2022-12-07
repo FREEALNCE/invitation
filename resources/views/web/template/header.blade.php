@@ -177,7 +177,7 @@
             </li>
 
             <li>
-                <a href="{{url('contact')}}l">Contact</a>
+                <a href="{{url('contact')}}">Contact</a>
             </li>
         </ul>
     </div>
